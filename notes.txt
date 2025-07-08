@@ -1,0 +1,18 @@
+brew install gh
+
+sudo chown -R `whoami`:admin /usr/local/share/fish/vendor_completions.d
+
+brew link gh
+-------------
+
+gh auth login
+gh repo create langgraph-projects --public --clone 
+
+echo "# langgraph-projects" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/ZeroPointThree17/langgraph-projects.git
+git push -u origin main
+
